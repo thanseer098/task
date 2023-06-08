@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for m in messages %}
+    {{m}}
+    {% endfor %}
+    {{user.id}}
+    {{user.name}}
+        <a href="{% url 'app5:update' user.id %}">update</a>
+        <a href="{% url 'app5:changepassword' user.id %}">changepassword</a>
+        <a href="{% url 'app5:delete' user.id %}">delete</a>
+        <a href="{% url 'app5:logout' %}">Logout</a>
+
+    </body>
+</html>

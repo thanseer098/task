@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        {% for img in images %}
+       <tr>
+        <th>{{img.brand}}
+            {{img.name}}
+               {{img.price}}
+       </th>
+    <td>
+        <img src="{{img.photo.url}}" height="100px" width="100px"></td>
+     </tr> 
+         
+{% endfor %}    
+    </table>
+                                                                                                                                                                                                                                                                                                                                                                                             
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for m in messages %}
+    {{m}}
+    {% endfor %}
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="login">
+    </form>
+        <a href="{% url 'app5:registration' %}">Register</a>
+        
+    </body>
+</html>
